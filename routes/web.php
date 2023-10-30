@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PostPrestadorController;
 use App\Http\Controllers\LoginPrestadorController;
 use App\Http\Controllers\LogoutPrestadorController;
+use App\Http\Controllers\ProfesionesController;
 use App\Http\Controllers\RegisterControllerPrestador;
 
 
@@ -42,3 +43,5 @@ Route::post('/logout-prestador', [LogoutPrestadorController::class,'store'])->na
 Route::get('/dashboard-prestador',[PostPrestadorController::class,'index'])->name('post-prestador.index');
 Route::get('/dashboard',[PostController::class,'index'])->name('post.index');
 
+Route::get('/dashboard-electricistas',[ProfesionesController::class,'electricistas'])->name('electricistas');
+Route::get('/dashboard-plomeros',[ProfesionesController::class,'plomeros'])->name('plomeros');
