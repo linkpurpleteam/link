@@ -15,7 +15,7 @@
 
                 <nav>
                     @auth
-                    <form method="POST" action="{{route('logout-prestador')}}">
+                    <form method="POST" action="{{route('logout')}}">
                         @csrf
                         <button type="submit">Cerrar Sesión</button>
                     </form>

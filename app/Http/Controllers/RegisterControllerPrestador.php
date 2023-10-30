@@ -52,8 +52,8 @@ class RegisterControllerPrestador extends Controller
 
         ]);
 
-        auth()->attempt($request->only('email','password'));
-        return redirect()->route('postPrestador.index');
+        auth('prestador')->attempt($request->only('email','password'));
+        return redirect()->route('post-prestador.index');
 
     }
 
