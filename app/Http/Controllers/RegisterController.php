@@ -45,7 +45,7 @@ class RegisterController extends Controller
 
 
         //Redireccionar
-        return redirect()->route('post.index');
+        return redirect()->route('postPrestador.index');
 
     }
 }

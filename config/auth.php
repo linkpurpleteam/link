@@ -18,6 +18,8 @@ return [
         'passwords' => 'users',
     ],
 
+    
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -40,7 +42,12 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'prestador' => [
+            'driver' => 'session',
+            'provider' => 'prestadors',
+        ]
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -65,11 +72,13 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'prestadors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Prestador::class,
+         ],
     ],
+
+    
 
     /*
     |--------------------------------------------------------------------------

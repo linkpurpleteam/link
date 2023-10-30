@@ -70,6 +70,7 @@
                     <p>{{$message}}</p>
                     @enderror
             </div>
+        </div>
             <input type="submit"
             value="Crear Cuenta">
         </form>

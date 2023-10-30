@@ -1,14 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PostPrestadorController;
+use App\Http\Controllers\LoginPrestadorController;
+use App\Http\Controllers\LogoutPrestadorController;
 use App\Http\Controllers\RegisterControllerPrestador;
 
 
 Route::get('/', function () {
+    return view('principal');
+});
+
+Route::get('/principal', function () {
     return view('principal');
 });
 
@@ -26,4 +34,11 @@ Route::get('/login', [LoginController::class,'index'])->name('login');
 Route::post('/login', [LoginController::class,'store']);
 Route::post('/logout', [LogoutController::class,'store'])->name('logout');
 
+Route::get('/login-prestador', [LoginPrestadorController::class,'index'])->name('login-prestador');
+Route::post('/login-prestador', [LoginPrestadorController::class,'store']);
+Route::post('/logout-prestador', [LogoutPrestadorController::class,'store'])->name('logout-prestador');
+
+
+Route::get('/dashboard-prestador',[PostPrestadorController::class,'index'])->name('post-prestador.index');
 Route::get('/dashboard',[PostController::class,'index'])->name('post.index');
+

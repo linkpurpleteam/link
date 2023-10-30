@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Prestador;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
-class RegisterControllerPrestador extends Controller
+class LogoutPrestadorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,6 @@ class RegisterControllerPrestador extends Controller
     public function index()
     {
         //
-        return view('auth.register-prestador');
     }
 
     /**
@@ -30,31 +28,9 @@ class RegisterControllerPrestador extends Controller
      */
     public function store(Request $request)
     {
-         //validacion
-         $this->validate($request, [
-            'name' => 'required|max:30',
-            'email' => 'required|unique:users|email|max:60',
-            'password' => 'required|confirmed|min:6',
-            'direccion' => 'required|min:5',
-            'numero' => 'required|max:13',
-            'edad' => 'required|max:2',
-            'profesion' => 'required'
-        ]);
+        auth('prestador')->logout();
 
-        Prestador::create([
-            'name'=> $request->name,
-            'email'=> $request->email,
-            'password'=> Hash::make($request->password),
-            'direccion'=> $request->direccion,
-            'numero'=> $request->numero,
-            'edad'=> $request->edad,
-            'profesion'=> $request->profesion
-
-        ]);
-
-        auth()->attempt($request->only('email','password'));
-        return redirect()->route('postPrestador.index');
-
+        return redirect()->route('login-prestador');
     }
 
     /**

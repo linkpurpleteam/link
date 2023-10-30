@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Inicia Sesion en Link Usuario
+    Inicia Sesion en Link Prestador
 @endsection
 
 @section('contenido')
 <div>
-    <form novalidate method="POST" action="{{route('login')}}">
+    <form novalidate method="POST" action="{{route('login-prestador')}}">
         @csrf
             <p>
                 {{session('mensaje')}}
@@ -39,8 +39,7 @@
     </form>
 </div>
 
-<a href="{{route('register')}}"><button>No tienes Cuenta? Crear Cuenta</button></a>
-<a href="{{route('login-prestador')}}"><button>si eres prestador inicia sesión aqui</button></a>
+<a href="{{route('register-prestador')}}"><button>No tienes Cuenta Prestador? Crear Cuenta</button></a>
 
 
 @endsection
