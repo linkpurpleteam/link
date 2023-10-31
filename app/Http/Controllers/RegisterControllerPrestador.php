@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Prestador;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class RegisterControllerPrestador extends Controller
 {
@@ -30,10 +31,14 @@ class RegisterControllerPrestador extends Controller
      */
     public function store(Request $request)
     {
+
+        //Modificacion del request
+        $request->request->add(['email' => Str::slug($request->email)]);
+
          //validacion
          $this->validate($request, [
             'name' => 'required|max:30',
-            'email' => 'required|unique:users|email|max:60',
+            'email' => 'required|unique:prestadors|email|max:60',
             'password' => 'required|confirmed|min:6',
             'direccion' => 'required|min:5',
             'numero' => 'required|max:13',
