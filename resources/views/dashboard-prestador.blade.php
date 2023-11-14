@@ -1,16 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.prestador-layout')
 
 @section('titulo')
-    Tu cuenta Prestador
+    Crear Oferta
 @endsection
 
-@section('contenido')
+@section('contenido-prestador')
 
-                    <div>
-                        <p>{{auth()->user()->name}}</p>
-                    </div>
-                    <div>
-                        <p>{{auth()->user()->email}}</p>
-                    </div>
+<main class="container-contacto">
+    <h1>Mostrar Ofertas</h1>
+    <livewire:mostrar-ofertas />
+    @if (session()->has('mensaje'))
+        <div>
+            {{session('mensaje')}}
+        </div>
+    @endif     
 
 @endsection
+

@@ -31,12 +31,8 @@ class RegisterControllerPrestador extends Controller
      */
     public function store(Request $request)
     {
-
-        //Modificacion del request
-        $request->request->add(['email' => Str::slug($request->email)]);
-
          //validacion
-         $this->validate($request, [
+            $this->validate($request, [
             'name' => 'required|max:30',
             'email' => 'required|unique:prestadors|email|max:60',
             'password' => 'required|confirmed|min:6',

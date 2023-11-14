@@ -17,4 +17,8 @@ class PostPrestadorController extends Controller
     {
         return view('dashboard-prestador');
     }
+
+    public function create(){
+        return view('create-prestador');
+    }
 }

@@ -1,12 +1,8 @@
 @extends('layouts.app')
 
-@section('titulo')
-    Inicia Sesion en Link Usuario
-@endsection
-
 @section('contenido')
-<div>
-    <form novalidate method="POST" action="{{route('login')}}">
+<div class="container-contacto">
+    <form class="form-contacto" novalidate method="POST" action="{{route('login')}}">
         @csrf
             <p>
                 {{session('mensaje')}}

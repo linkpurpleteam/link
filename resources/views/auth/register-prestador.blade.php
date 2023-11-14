@@ -5,8 +5,8 @@
 @endsection
 
 @section('contenido')
-<div>
-    <form action="{{route('register-prestador')}}" method="POST" novalidate>
+<div class="container-contacto">
+    <form class="form-contacto" action="{{route('register-prestador')}}" method="POST" novalidate>
         @csrf
         <div>
             <label for="name">Nombre y Apellido:</label>

@@ -5,8 +5,8 @@
 @endsection
 
 @section('contenido')
-<div>
-    <form novalidate method="POST" action="{{route('login-prestador')}}">
+<div class="container-contacto">
+    <form class="form-contacto" novalidate method="POST" action="{{route('login-prestador')}}">
         @csrf
             <p>
                 {{session('mensaje')}}

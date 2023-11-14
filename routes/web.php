@@ -41,6 +41,7 @@ Route::post('/logout-prestador', [LogoutPrestadorController::class,'store'])->na
 
 
 Route::get('/dashboard-prestador',[PostPrestadorController::class,'index'])->name('post-prestador.index');
+Route::get('/create-prestador',[PostPrestadorController::class,'create'])->name('oferta.create');
 Route::get('/dashboard',[PostController::class,'index'])->name('post.index');
 
 Route::get('/dashboard-electricistas',[ProfesionesController::class,'electricistas'])->name('electricistas');
