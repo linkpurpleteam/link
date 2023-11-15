@@ -43,7 +43,19 @@
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Categorías</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('login-prestador')}}">Registrar servicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/login">Iniciar sesión</a></li>
+                        <li class="nav-item"><li class="nav-item">
+                            @auth
+                            <a class="active d-none d-lg-block">
+                            <form method="POST" action="{{route('logout')}}">
+                                @csrf
+                                <button type="submit">Cerrar Sesión</button>
+                            </form>
+                            </a>
+                            @endauth
+                            @guest
+                            <a href="/login"><button class="btn btn-primary ml-auto active d-none d-lg-block">Iniciar Sesión</button></a>
+                            @endguest
+                        </li></li>
                        
                     </ul>
                 </div>

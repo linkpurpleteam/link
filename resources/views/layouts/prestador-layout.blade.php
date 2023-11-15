@@ -38,9 +38,19 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href=""{{route('post-prestador.index')}}">Mis Ofertas</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/create-prestador">Categorías</a></li>
-                         
-                           
+                            <li class="nav-item"><a class="nav-link" href="/create-prestador">Crear Oferta</a></li>
+                            <li class="nav-item">@auth
+                                <a class="active d-none d-lg-block">
+                                <form method="POST" action="{{route('logout')}}">
+                                    @csrf
+                                    <button type="submit">Cerrar Sesión</button>
+                                </form>
+                                </a>
+                                @endauth
+                                @guest
+                                <a href="/login"><button class="btn btn-primary ml-auto active d-none d-lg-block">Iniciar Sesión</button></a>
+                                @endguest
+                            </li>
                         </ul>
                     </div>
                 </div>
