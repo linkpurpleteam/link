@@ -18,7 +18,7 @@
           <nav class="navbar bg-body-tertiary">
             <img id="logo" src="{{asset('imagenes/logo.png')}}" alt="Logo" width="75" height="40" class="d-inline-block align-text-top">
                 <div class="container-fluid">
-                  <a href="{{asset('principal')}}"" class="active d-none d-lg-block">Inicio</a>
+                  <a href="{{asset('principal')}}" class="active d-none d-lg-block">Inicio</a>
                   <a href="#servicio" class="active d-none d-lg-block">Categorías</a>
                   <a href="{{route('login-prestador')}}" class="active d-none d-lg-block">Registrar servicio</a>
                   <a href="#contacto" class="active d-none d-lg-block">Contacto</a>
@@ -39,11 +39,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{asset('principal')}}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Categorías</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Registrar servicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('login-prestador')}}">Registrar servicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link">Iniciar sesión</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Iniciar sesión</a></li>
                        
                     </ul>
                 </div>
