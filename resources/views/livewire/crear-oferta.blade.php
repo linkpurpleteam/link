@@ -1,4 +1,5 @@
 <form class="form-contacto" wire:submit.prevent='crearVacante'>
+    @csrf
     <div>
         <label for="titulo">Titulo Oferta</label>
         <input id="titulo"
