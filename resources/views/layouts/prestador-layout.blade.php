@@ -19,7 +19,6 @@
                     <div class="container-fluid">
                       <a href="{{route('post-prestador.index')}}" class="active d-none d-lg-block">Mis Ofertas</a>
                       <a href="{{route('oferta.create')}}" class="active d-none d-lg-block">Crear Oferta</a>
-                      
                       @auth
                       <a class="active d-none d-lg-block">
                       <form method="POST" action="{{route('logout')}}">
@@ -39,18 +38,19 @@
                         <ul class="navbar-nav">
                             <li class="nav-item"><a class="nav-link" href=""{{route('post-prestador.index')}}">Mis Ofertas</a></li>
                             <li class="nav-item"><a class="nav-link" href="/create-prestador">Crear Oferta</a></li>
-                            <li class="nav-item">@auth
-                                <a class="active d-none d-lg-block">
-                                <form method="POST" action="{{route('logout')}}">
+                            <li class="nav-item">
+                                @auth
+                                <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <button type="submit">Cerrar Sesión</button>
+                                    <button type="submit" class="btn btn-link">Cerrar Sesión</button>
                                 </form>
-                                </a>
                                 @endauth
-                                @guest
-                                <a href="/login"><button class="btn btn-primary ml-auto active d-none d-lg-block">Iniciar Sesión</button></a>
-                                @endguest
                             </li>
+                            @guest
+                            <li class="nav-item">
+                                <a href="/login" class="btn btn-primary">Iniciar Sesión</a>
+                            </li>
+                            @endguest 
                         </ul>
                     </div>
                 </div>
