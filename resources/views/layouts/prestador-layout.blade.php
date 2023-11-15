@@ -17,8 +17,8 @@
               <nav class="navbar bg-body-tertiary">
                 <img id="logo" src="{{asset('imagenes/logo.png')}}" alt="Logo" width="75" height="40" class="d-inline-block align-text-top">
                     <div class="container-fluid">
-                      <a href="/dashboard-prestador"" class="active d-none d-lg-block">Mis Ofertas</a>
-                      <a href="/create-prestador" class="active d-none d-lg-block">Crear Oferta</a>
+                      <a href="{{route('post-prestador.index')}}" class="active d-none d-lg-block">Mis Ofertas</a>
+                      <a href="{{route('oferta.create')}}" class="active d-none d-lg-block">Crear Oferta</a>
                       
                       @auth
                       <a class="active d-none d-lg-block">
@@ -37,7 +37,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="/dashboard-prestador">Mis Ofertas</a></li>
+                            <li class="nav-item"><a class="nav-link" href=""{{route('post-prestador.index')}}">Mis Ofertas</a></li>
                             <li class="nav-item"><a class="nav-link" href="/create-prestador">Categorías</a></li>
                          
                            

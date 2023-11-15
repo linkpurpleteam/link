@@ -6,7 +6,7 @@
 
 @section('contenido')
 
-                    <div>
+                    <div class="container-form">
                         <p>{{auth()->user()->name}}</p>
                     </div>
                     <div>

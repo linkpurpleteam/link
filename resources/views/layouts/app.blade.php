@@ -18,9 +18,9 @@
           <nav class="navbar bg-body-tertiary">
             <img id="logo" src="{{asset('imagenes/logo.png')}}" alt="Logo" width="75" height="40" class="d-inline-block align-text-top">
                 <div class="container-fluid">
-                  <a href="/principal"" class="active d-none d-lg-block">Inicio</a>
+                  <a href="{{asset('principal')}}"" class="active d-none d-lg-block">Inicio</a>
                   <a href="#servicio" class="active d-none d-lg-block">Categorías</a>
-                  <a href="/login-prestador" class="active d-none d-lg-block">Registrar servicio</a>
+                  <a href="{{route('login-prestador')}}" class="active d-none d-lg-block">Registrar servicio</a>
                   <a href="#contacto" class="active d-none d-lg-block">Contacto</a>
                   @auth
                   <a class="active d-none d-lg-block">
