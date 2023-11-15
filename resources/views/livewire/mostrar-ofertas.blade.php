@@ -8,7 +8,7 @@
     </div>   
     <div>
         <a href="#">Interesados</a>
-        <a href="#">Editar</a>
+        <a href="{{route('oferta.edit',$oferta->id)}}">Editar</a>
         <a href="#">Eliminar</a>
     </div>
   

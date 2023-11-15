@@ -10,6 +10,7 @@ use Livewire\WithFileUploads;
 
 class CrearOferta extends Component
 {
+    //Atributos
     public $titulo;
     public $precio;
     public $categoria;
@@ -19,7 +20,7 @@ class CrearOferta extends Component
     use WithFileUploads;
 
 
-
+    //Requerimientos para el formulario
     protected $rules = [
         'titulo' => 'required|string',
         'precio' => 'required',
@@ -29,6 +30,7 @@ class CrearOferta extends Component
 
     ];
 
+    //Metodo de creacion
     public function crearVacante()
     {
         $datos = $this->validate();

@@ -2,6 +2,7 @@
 
 @section('contenido')
 <div class="container-contacto">
+    <h1>Inicia sesión Usuario</h1>
     <form class="form-contacto" novalidate method="POST" action="{{route('login')}}">
         @csrf
             <p>

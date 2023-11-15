@@ -417,3 +417,16 @@ h2 {
   /* Ajusta el tamaño de la fuente u otros estilos según sea necesario */
 }
 
+/* Estilos para el contenedor de la imagen */
+.imagen-container {
+    max-width: 300px; /* Define el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que pueda desbordar el contenedor */
+}
+
+/* Estilos para la imagen dentro del contenedor */
+.imagen-container img {
+    width: 100%; /* Garantiza que la imagen ocupe el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    display: block; /* Elimina el espacio adicional por debajo de la imagen */
+}

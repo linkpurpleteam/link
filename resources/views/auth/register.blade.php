@@ -6,6 +6,7 @@
 
 @section('contenido')
     <div class="container-contacto">
+        <h1>Registrate como Usuario</h1>
         <form class="form-contacto" action="{{route('register')}}" method="POST" novalidate>
             @csrf
             <div>
