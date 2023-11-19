@@ -56,7 +56,7 @@
         <div class="imagen-container">
             @if($imagen)
                 Imagen: 
-                <img src="{{$imagen->temporaryUrl()}}">
+                <img src="{{ $imagen->temporaryUrl() }}">
             @endif
         </div>
         @error('imagen')
