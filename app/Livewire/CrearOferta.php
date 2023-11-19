@@ -37,8 +37,8 @@ class CrearOferta extends Component
 
         //Almacenar la Imagen
 
-        $imagen = $this->imagen->store('public/vacantes');
-        $datos['imagen'] = str_replace('public/vacantes/', '', $imagen);
+        $imagen = $this->imagen->store('public/ofertas');
+        $datos['imagen'] = str_replace('public/ofertas/', '', $imagen);
 
 
         //Crear Vacante

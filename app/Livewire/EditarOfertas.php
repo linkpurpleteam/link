@@ -50,8 +50,8 @@ class EditarOfertas extends Component
 
         //Si Hay una nueva imagen
         if($this->imagen_nueva){
-            $imagen = $this->imagen_nueva->store('public/vacantes');
-            $datos['imagen'] = str_replace('public/vacantes/', '', $imagen);
+            $imagen = $this->imagen_nueva->store('public/ofertas');
+            $datos['imagen'] = str_replace('public/ofertas/', '', $imagen);
         }
         //Encontrar la Vacante a editar
         $oferta = Oferta::find($this->oferta_id);
