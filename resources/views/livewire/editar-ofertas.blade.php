@@ -55,7 +55,7 @@
             accept="image/*">
         <div class="imagen-container">
           <label>Imagen Actual</label>
-            <img src="{{asset('storage/ofertas/' . $imagen)}}" alt="{{'Imagen Vacante' . $titulo}}">
+            <img src="{{asset('storage/app/public/ofertas/' . $imagen)}}" alt="{{'Imagen Vacante' . $titulo}}">
         </div>
         <div class="imagen-container">
             @if ($imagen_nueva)
