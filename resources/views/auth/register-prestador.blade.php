@@ -1,16 +1,15 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Anotate prestador
+    Registrate como prestador
 @endsection
 
 @section('contenido')
 <div class="container-contacto">
-    <h1>Registrate como Prestador</h1>
-    <form class="form-contacto" action="{{route('register-prestador')}}" method="POST" novalidate>
+    <form class="form-contacto-prestador" action="{{route('register-prestador')}}" method="POST" novalidate>
+        <h1>Registrate como prestador</h1>
         @csrf
         <div>
-            <label for="name">Nombre y Apellido:</label>
             <input id="name"
                 name="name"
                 type="text"
@@ -22,7 +21,6 @@
             @enderror                           
         </div>
         <div>
-            <label for="direccion">Direccion:</label>
             <input id="direccion"
                 name="direccion"
                 type="text"
@@ -32,7 +30,6 @@
                 @enderror
         </div>
         <div>
-            <label for="email">Email</label>
             <input id="email"
                 name="email"
                 type="email"
@@ -42,7 +39,6 @@
                 @enderror
         </div>
         <div>
-            <label for="numero">Numero de Contacto</label>
             <input id="numero"
                 name="numero"
                 type="text"
@@ -52,7 +48,6 @@
                 @enderror
         </div>
         <div>
-            <label for="edad">Edad</label>
             <input id="edad"
                 name="edad"
                 type="text"
@@ -62,18 +57,16 @@
                 @enderror
         </div>
         <div>
-            <label for="profesion">Profesion</label>
-              <select name="profesion" id="profesion">
+              <select class="desplega" name="profesion" id="profesion">
                 <option value="">--Selecciona una profesion--</option>
                 <option value="1">Electricista</option>
-                <option value="2">Plomero</option>
+                <option value="2" >Plomero</option>
               </select>
                 @error('profesion')
                 <p>{{$message}}</p>
                 @enderror
         </div>
         <div>
-            <label for="password">Password</label>
             <input id="password"
                 name="password"
                 type="password"
@@ -83,7 +76,6 @@
                 @enderror
         </div>
         <div>
-            <label for="password_confirmation">Repetir Password</label>
             <input id="password_confirmation"
                 name="password_confirmation"
                 type="password"
@@ -92,7 +84,7 @@
                 <p>{{$message}}</p>
                 @enderror
         </div>
-        <input type="submit"
+        <input class="btn btn-contacto" type="submit"
         value="Crear Cuenta">
     </form>
 </div>

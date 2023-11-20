@@ -1,28 +1,25 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Crear Cuenta
+    Crear cuenta como usuario
 @endsection
 
 @section('contenido')
     <div class="container-contacto">
-        <h1>Registrate como Usuario</h1>
         <form class="form-contacto" action="{{route('register')}}" method="POST" novalidate>
+            <h1>Crear cuenta como usuario</h1>
             @csrf
             <div>
-                <label for="name">Nombre y Apellido:</label>
                 <input id="name"
                     name="name"
                     type="text"
                     placeholder="Tu nombre" 
-                    value="{{old('name')}}"          
-                >
+                    value="{{old('name')}}">
                 @error('name')
                 <p>{{$message}}</p>
                 @enderror                           
             </div>
             <div>
-                <label for="direccion">Direccion:</label>
                 <input id="direccion"
                     name="direccion"
                     type="text"
@@ -32,7 +29,6 @@
                     @enderror
             </div>
             <div>
-                <label for="email">Email</label>
                 <input id="email"
                     name="email"
                     type="email"
@@ -42,7 +38,6 @@
                     @enderror
             </div>
             <div>
-                <label for="numero">Numero de Contacto</label>
                 <input id="numero"
                     name="numero"
                     type="text"
@@ -52,7 +47,6 @@
                     @enderror
             </div>
             <div>
-                <label for="password">Password</label>
                 <input id="password"
                     name="password"
                     type="password"
@@ -62,7 +56,6 @@
                     @enderror
             </div>
             <div>
-                <label for="password_confirmation">Repetir Password</label>
                 <input id="password_confirmation"
                     name="password_confirmation"
                     type="password"
@@ -71,8 +64,7 @@
                     <p>{{$message}}</p>
                     @enderror
             </div>
-        </div>
-            <input type="submit"
+            <input class="btn btn-contacto" type="submit"
             value="Crear Cuenta">
         </form>
     </div>

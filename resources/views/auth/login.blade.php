@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
+@section('titulo')
+    Inicia sesion usuario
+@endsection
+
 @section('contenido')
 <div class="container-contacto">
-    <h1>Inicia sesión Usuario</h1>
     <form class="form-contacto" novalidate method="POST" action="{{route('login')}}">
+        <h1>Inicia sesion usuario</h1>
         @csrf
             <p>
                 {{session('mensaje')}}
@@ -12,7 +16,6 @@
 
         @endif
         <div>
-            <label for="email">Email</label>
             <input id="email"
                 name="email"
                 type="email"
@@ -22,7 +25,6 @@
                 @enderror
         </div>
         <div>
-            <label for="password">Password</label>
             <input id="password"
                 name="password"
                 type="password"
@@ -31,13 +33,10 @@
                 <p>{{$message}}</p>
                 @enderror
         </div>
-        <input type="submit"
+        <input class="btn btn-contacto" type="submit"
         value="Ingresar">
+        <p>¿No tienes cuenta?<a class="creaCuenta" href="{{route('register')}}">Crear cuenta</a></p>
+        <a class="creaCuenta" href="{{route('login-prestador')}}">Si eres prestador inicia sesión aqui</a>
     </form>
 </div>
-
-<a href="{{route('register')}}"><button>No tienes Cuenta? Crear Cuenta</button></a>
-<a href="{{route('login-prestador')}}"><button>si eres prestador inicia sesión aqui</button></a>
-
-
 @endsection
