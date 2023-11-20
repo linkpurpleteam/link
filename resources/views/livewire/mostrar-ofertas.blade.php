@@ -3,7 +3,7 @@
 
     @foreach ($ofertas as $oferta )
     <div>
-        <a href="">{{$oferta->titulo}}</a>
+        <a href="{{route('oferta.show', $oferta->id)}}">{{$oferta->titulo}}</a>
         <p>{{$oferta->descripcion}}</p>
     </div>   
     <div>

@@ -10,7 +10,8 @@ class PostPrestadorController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:prestador');
+
+        $this->middleware('auth:prestador')->except(['show']);
     }
 
     //
@@ -19,6 +20,12 @@ class PostPrestadorController extends Controller
         return view('dashboard-prestador');
     }
 
+    public function show(Oferta $oferta)
+    {
+        return view('show',[
+            'oferta' => $oferta
+        ]);
+    }
     public function create(){
         return view('create-prestador');
     }
