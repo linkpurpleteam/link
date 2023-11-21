@@ -694,3 +694,16 @@ option{
 @media (min-width: 992px) {
   /* Ajusta el tamaño de la fuente u otros estilos según sea necesario */
 }
+
+.imagen-container {
+    width: 300px; /* Puedes ajustar el ancho según tus necesidades */
+    height: 200px; /* Puedes ajustar la altura según tus necesidades */
+    overflow: hidden;
+    border: 1px solid #ccc; /* Borde opcional */
+}
+
+.imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para asegurar que la imagen cubra completamente el contenedor */
+}

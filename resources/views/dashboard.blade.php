@@ -6,11 +6,8 @@
 
 @section('contenido')
 
-                    <div class="container-contacto">
-                        <p>{{auth()->user()->name}}</p>
-                    </div>
-                    <div>
-                        <p>{{auth()->user()->email}}</p>
-                    </div>
+        <div class="container-contacto">
+            <h2>Bienvenido a tu Muro: {{$user->name}}</h2>
+        </div>
 
 @endsection

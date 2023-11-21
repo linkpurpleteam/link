@@ -10,8 +10,9 @@ class PostPrestadorController extends Controller
 {
     public function __construct()
     {
-
+       
         $this->middleware('auth:prestador')->except(['show']);
+        
     }
 
     //
