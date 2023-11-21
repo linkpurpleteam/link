@@ -6,8 +6,7 @@
 
 @section('contenido')
 
-        <div class="container-contacto">
+        <div class="muro-container">
             <h2>Bienvenido a tu Muro: {{$user->name}}</h2>
         </div>
-
 @endsection

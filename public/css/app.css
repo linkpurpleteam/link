@@ -707,3 +707,13 @@ option{
     height: 100%;
     object-fit: cover; /* Para asegurar que la imagen cubra completamente el contenedor */
 }
+
+.muro-container {
+    max-width: 800px;
+    height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
