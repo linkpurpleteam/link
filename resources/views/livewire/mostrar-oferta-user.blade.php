@@ -1,8 +1,8 @@
 <div>
     <div>
-        <h3>
+        <h2>
             {{$oferta->titulo}}
-        </h3>
+        </h2>
         <div>
             <p>
                 precio por hora: <span>{{$oferta->precio->precio}}</span>
@@ -28,7 +28,10 @@
             Deseas Solicitar esta Oferta?<a href="{{ route('register')}}">Obten una cuenta y aplica a esta y otras ofertas</a>
         </div>
     @endguest
-
+    
+    @auth
+    <livewire:postular-oferta :oferta="$oferta"/>
+    @endauth
+    
    
-        
 </div>

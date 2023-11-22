@@ -6,7 +6,7 @@
         <a href="{{route('oferta.show', $oferta->id)}}">{{$oferta->titulo}}</a>
         <p>{{$oferta->descripcion}}</p>
     </div>   
-    @auth('prestador')
+  
         
    
     <div>
@@ -14,7 +14,7 @@
         <a href="{{route('oferta.edit',$oferta->id)}}">Editar</a>
         <button wire:click="$dispatch('mostrarAlerta', {{$oferta->id}})">
             Eliminar</button>
-    @endauth
+
     </div>
   
     @endforeach

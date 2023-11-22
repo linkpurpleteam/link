@@ -36,5 +36,3 @@ class Oferta extends Model
         return $this->hasMany(Solicitante::class);
     }
 }
-
-

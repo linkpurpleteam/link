@@ -21,4 +21,11 @@ class PostController extends Controller
         $user = auth()->user(); // Obtener el usuario autenticado
         return view('dashboard', compact('user', 'ofertas'));
     }
+
+    public function show(Oferta $oferta)
+    {
+        return view('show-user',[
+            'oferta' => $oferta
+        ]);
+    }
 }

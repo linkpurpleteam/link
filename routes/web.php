@@ -44,4 +44,5 @@ Route::get('/dashboard-prestador',[PostPrestadorController::class,'index'])->nam
 Route::get('/create-prestador',[PostPrestadorController::class,'create'])->name('oferta.create');
 Route::get('/create-prestador/{oferta}/edit',[PostPrestadorController::class,'edit'])->name('oferta.edit');
 Route::get('/create-prestador/{oferta}',[PostPrestadorController::class,'show'])->name('oferta.show');
+Route::get('/dashboard/{oferta}',[PostController::class,'show'])->name('oferta.show-user');
 Route::get('/dashboard',[PostController::class,'index'])->name('post.index');
