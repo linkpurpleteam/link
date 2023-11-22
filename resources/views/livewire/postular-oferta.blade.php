@@ -1,3 +1,5 @@
 <div>
-    <p>aqui se mostrara el form</p>
+   <form action="">
+       <label for=""></label>
+   </form>
 </div>
