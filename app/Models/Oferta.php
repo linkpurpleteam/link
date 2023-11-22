@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Precio;
 use App\Models\Categoria;
+use App\Models\Solicitante;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -30,6 +31,10 @@ class Oferta extends Model
     return $this->belongsTo(Precio::class);
     }
 
+    public function solicitantes()
+    {
+        return $this->hasMany(Solicitante::class);
+    }
 }
 
 

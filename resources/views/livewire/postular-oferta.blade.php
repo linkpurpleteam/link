@@ -1,5 +1,6 @@
 <div>
-   <form action="">
-       <label for=""></label>
+    <p>Solicitar</p>
+   <form >
+       <button>{{'solicitar'}}</button>
    </form>
 </div>

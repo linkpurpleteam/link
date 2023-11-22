@@ -21,6 +21,8 @@
             <p>{{$oferta->descripcion}}</p>
         </div>
     </div>
+
+
     @guest
         <div>
             Deseas Solicitar esta Oferta?<a href="{{ route('register')}}">Obten una cuenta y aplica a esta y otras ofertas</a>
@@ -28,11 +30,14 @@
     @endguest
 
 
-
-    @cannot('create', App\Models\Oferta::class)
-    <livewire:postular-oferta />
-    @endcannot
     
+
+    @auth('web')
+        
+    
+    <livewire:postular-oferta :oferta="$oferta"/>
+    
+    @endauth
        
         
 </div>
