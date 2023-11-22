@@ -6,6 +6,9 @@
                     <a href="{{route('post-prestador.index')}}" class="active d-none d-lg-block">Mis Ofertas</a>
                     <a href="{{route('oferta.create')}}" class="active d-none d-lg-block">Crear Oferta</a>
                     @auth
+                    <a href="{{route('notificaciones')}}">
+                        {{auth()->user()->unreadNotifications->count()}}
+                    </a>
                     <a class="active d-none d-lg-block">
                     <form method="POST" action="{{route('logout')}}">
                         @csrf

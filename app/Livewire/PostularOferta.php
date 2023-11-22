@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Oferta;
+use App\Notifications\NuevaSolicitud;
 use Livewire\Component;
 
 class PostularOferta extends Component
@@ -22,11 +23,13 @@ class PostularOferta extends Component
             'user_id' => auth()->user()->id,
         ]);
 
-        //Crear notificacion y enviar email
-        session()->flash('mensaje', 'Se envio correctamente la solicitud');
-        return redirect()->back();
+        //Crear notificacion 
+        $this->oferta->prestador->notify(new NuevaSolicitud($this->oferta->id, $this->oferta->titulo, auth()->user()->id,));
+      
 
         //Mostrar el usuario mensaje de ok
+        session()->flash('mensaje', 'Se envio correctamente la solicitud');
+        return redirect()->back();
     }
 
 

@@ -35,4 +35,8 @@ class Oferta extends Model
     {
         return $this->hasMany(Solicitante::class);
     }
+    public function prestador()
+    {
+        return $this->belongsTo(Prestador::class, 'prestador_id');
+    }
 }

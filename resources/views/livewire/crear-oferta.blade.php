@@ -71,7 +71,7 @@
                 @enderror
             </div>
             <button class="btn btn-contacto">
-                Crear Vacante
+                Crear 
             </button>
         </form>
     </div>

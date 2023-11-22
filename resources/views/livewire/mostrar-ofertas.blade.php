@@ -20,9 +20,9 @@
     @endforeach
 
 
-     @else
+    @else
         <p>No hay ofertas que Mostrar</p>
-        @endif
+    @endif
         <div class="livewire-pagination-container pagination">
         {{$ofertas->links()}}
     </div>
