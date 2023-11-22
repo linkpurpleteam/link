@@ -8,7 +8,7 @@
 
     <div class="container-contacto">
         <div class="container-contacto">
-            <h1>Publicar Oferta</h1>
+            
         <livewire:crear-oferta />
         </div>
         <div>
