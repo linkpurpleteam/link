@@ -26,9 +26,13 @@
             Deseas Solicitar esta Oferta?<a href="{{ route('register')}}">Obten una cuenta y aplica a esta y otras ofertas</a>
         </div>
     @endguest
-    @auth('web')
-        <div>
-            <a href="">Contactar Oferta</a>
-        </div>
-    @endauth
+
+
+
+    @cannot('create', App\Models\Oferta::class)
+    <livewire:postular-oferta />
+    @endcannot
+    
+       
+        
 </div>

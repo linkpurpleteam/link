@@ -10,9 +10,11 @@ use Illuminate\Auth\Access\Response;
 class OfertaPolicy
 {
 
-    /**
-     * Determine whether the user can update the model.
-     */
+    public function create(Prestador $prestador)
+    { 
+        return $prestador;
+    }
+    
     public function update(Prestador $prestador, Oferta $oferta): bool
     {
         return $prestador->id === $oferta->prestador_id;
