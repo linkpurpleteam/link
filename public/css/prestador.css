@@ -132,9 +132,6 @@
     top: -62px;
 }
 
-
-
-
 /*aqui crear oferta formulario publicar*/
 
 .contenedor-crear-oferta{
@@ -217,7 +214,20 @@
     gap: 20px;
 }
 
-/* aqui mostrar publicaciones */
+/*aqui mostrar-oferta */
+
+.contenedor-mostrar-oferta{
+    display: grid;
+    place-items: center;
+    margin: 100px;
+}
+
+.datos-mostrar-oferta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+}
 
 .titulo-oferta-mostrar{
     color: var(--blanco);
@@ -226,8 +236,43 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    background-color: var(--turquesa);
+    width: 50%;
+    border-radius: 12px;
+    text-align: center;
 }
 
+.mostrar-mioferta{
+    display: grid;
+    place-items: center;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 20px;
+    background: var(--azul-oscuro);
+    box-sizing: border-box;
+    box-shadow: 0 20px 35px 15px rgba(0,0,0,.6);
+    border-radius: 10px;
+    color: var(--blanco);
+    width: 880px;
+}
+
+.mostrar-oferta-item{
+    font-size: 20px;
+    width: auto;
+    text-decoration: none;
+}
+
+.mostrar-oferta-item a{
+    text-decoration: none;
+    color: var(--turquesa2);
+}
+
+.subtitulo-mostrar-oferta{
+    font-size: 20px;
+}
 
 /* VISTA MIS PUBLICACIONES */
 
