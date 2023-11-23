@@ -4,8 +4,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
-    padding-bottom: 50px;
+    margin: 0% 0 10% 0;
 }
 
 /* aqui bloque izquierda perfil y botones*/
@@ -15,9 +14,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 560px;
+    width: 360px;
     height: auto;
-    margin-top: -239px;
 }
 
 .foto-prestador{
@@ -26,7 +24,7 @@
     margin-bottom: -11%;
 }
 
-.miperfil{
+.miperfil-prestador{
     margin-top: 50px;
     border-radius: 30px;
     border: 3px solid #F57811;
@@ -140,10 +138,10 @@
 }
 
 .titulo-publicar{
-    width: 60%;
-    margin-top: 90px;
+    width: 100%;
+    margin-top: 130px;
     background-color: var(--naranja);
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
 }
 
 .contenido-formulario-publi{
@@ -292,3 +290,4 @@
     border: 3px solid var(--turquesa);
     background: var(--blanco);
 }
+

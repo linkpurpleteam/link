@@ -86,13 +86,7 @@ body {
 
 .navbar #logo {
     justify-content: flex-start;
-    margin-left: 15px;
-    opacity: 0.6;   
-}
-
-.navbar #logo:hover {
-    opacity: 1;
-    transition: .9s;
+    margin-left: 15px; 
 }
 
 /* Aqui empieza el estilo del menú hamburguesa */
@@ -354,7 +348,7 @@ h2 {
 
 .h3 {
     bottom: 0;
-    margin: 0 auto ;
+    margin: 0 auto;
 }
 
 .contenedor {

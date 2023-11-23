@@ -1,0 +1,41 @@
+/* aqui notificaiones hacia el prestador*/
+
+.conten-usuario{
+   display: grid;
+   place-items: center;
+   width: 40%;
+   padding: 0%;
+}
+
+.conten-margen-usuario{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.miperfil-usuario-notificacion{
+    margin-top: 50px;
+    border-radius: 30px;
+    border: 3px solid var(--turquesa);
+    width: 230px;
+    height: 305px;
+    flex-shrink: 0;
+    margin: 13px 4px;
+    padding-top: 30px;
+}
+
+.dato-usuario{
+    background-color: var(--turquesa);
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 275;
+    line-height: normal;
+}
+
+.ver-notificacion{
+    width: 270px;
+    display: grid;
+    place-items: center;
+}
