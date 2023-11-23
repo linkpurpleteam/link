@@ -1,8 +1,8 @@
 <header class="header">
     <nav class="navbar bg-body-tertiary">
-        <img id="logo" src="{{route('imagenes/logo y letra.png')}}" alt="Logo" width="200vh" height="200vh" class="d-inline-block align-text-top">
+        <img id="logo" src="{{asset('imagenes/logo y letra.png')}}" alt="Logo" width="200vh" height="200vh" class="d-inline-block align-text-top">
             <div class="container-fluid">
-            <a href="{{route('post-prestador.index')}}" class="active d-none d-lg-block"><img style="width: 25%; height: auto;" src="{{route('imagenes/logomiperfil.png')}}" alt="logomiperfil">&#160;Mi perfil</a>
+            <a href="{{route('post-prestador.index')}}" class="active d-none d-lg-block"><img style="width: 25%; height: auto;" src="{{asset('imagenes/logomiperfil.png')}}" alt="logomiperfil">&#160;Mi perfil</a>
             <a href="{{route('oferta.create')}}" class="active d-none d-lg-block">Solicitudes</a>
             @auth
             <a class="active d-none d-lg-block">
