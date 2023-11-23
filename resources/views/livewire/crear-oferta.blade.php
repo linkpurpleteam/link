@@ -5,7 +5,7 @@
     <div class="contenido-formulario-publi">
         <form class="form-publicacion" wire:submit.prevent='crearVacante'>
             <div>
-                <label for="titulo">Titulo Oferta</label>
+                <label for="titulo">Titulo de publicacion</label>
                 <input id="titulo"
                     name="titulo"
                     type="text"
@@ -43,7 +43,7 @@
             </div>
 
             <div class="descripcion-oferta">
-                <label for="descripcion">Descripcion de la Oferta</label>
+                <label for="descripcion">Descripcion de la publicacion</label>
                 <textarea name="descripcion" 
                 wire:model="descripcion"
                 id="descripcion"  
