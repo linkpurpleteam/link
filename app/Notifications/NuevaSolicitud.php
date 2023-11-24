@@ -15,13 +15,14 @@ class NuevaSolicitud extends Notification
     public $id_oferta;
     public $nombre_oferta;
     public $usuario_id;
+    public $usuario_numero;
 
-    public function __construct($id_oferta, $nombre_oferta, $usuario_id)
+    public function __construct($id_oferta, $nombre_oferta, $usuario_id, $user_numero)
     {
         $this->id_oferta = $id_oferta;
         $this->nombre_oferta = $nombre_oferta;
         $this->usuario_id = $usuario_id;
-
+        $this->usuario_numero = $user_numero;
     }
 
     /**
@@ -55,7 +56,9 @@ class NuevaSolicitud extends Notification
         return [
             'id_oferta' => $this->id_oferta,
             'nombre_oferta' => $this->nombre_oferta,
-            'usuario_id' => $this->usuario_id
+            'usuario_id' => $this->usuario_id,
+            'usuario_numero' => $this->usuario_numero
+
         ];
    }
 }

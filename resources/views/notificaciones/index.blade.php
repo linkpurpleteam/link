@@ -29,14 +29,15 @@
                         <span>{{$notificacion->created_at->diffForHumans()}}</span>
                     </p>
                 </div>
-                {{-- Por Hacer!! --}}
+                
                 <p class="dato-usuario">Telefono:</p>
                 <div>
-                    {{-- <p>{{$notificacion->data['']}}</p> --}}
+                    <p>{{$notificacion->data['usuario_numero']}}</p>
                 </div>
             </div> 
             <div class="ver-notificacion">
                 <div class="btn-contacto">
+                    {{-- Por Hacer!! --}}
                     <a href="#" >Ver</a>
                 </div>  
             </div>
