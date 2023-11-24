@@ -29,9 +29,10 @@
                         <span>{{$notificacion->created_at->diffForHumans()}}</span>
                     </p>
                 </div>
+                {{-- Por Hacer!! --}}
                 <p class="dato-usuario">Telefono:</p>
                 <div>
-                    <p>{{auth()->user()->Telefono}}</p>
+                    <p>{{$notificacion->data['']}}</p>
                 </div>
             </div> 
             <div class="ver-notificacion">

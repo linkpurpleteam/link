@@ -14,7 +14,12 @@
                 <ul>
                     @if(count($oferta) > 0)
                     @foreach ($oferta->solicitantes as $solicitante )
-                        
+                        <li>
+                            <div>
+
+                            </div>
+                            
+                        </li>
                     @endforeach
 
                     @else
