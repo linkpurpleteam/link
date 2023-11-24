@@ -32,7 +32,7 @@
                 {{-- Por Hacer!! --}}
                 <p class="dato-usuario">Telefono:</p>
                 <div>
-                    <p>{{$notificacion->data['']}}</p>
+                    {{-- <p>{{$notificacion->data['']}}</p> --}}
                 </div>
             </div> 
             <div class="ver-notificacion">
