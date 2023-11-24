@@ -37,8 +37,8 @@
             </div> 
             <div class="ver-notificacion">
                 <div class="btn-contacto">
-                    {{-- Por Hacer!! --}}
-                    <a href="#" >Ver</a>
+                    
+                    <a href="{{route('solicitantes.index', $notificacion->data['id_oferta'])}}" >Ver Interesados</a>
                 </div>  
             </div>
         </div>    

@@ -6,11 +6,12 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProfesionesController;
+use App\Http\Controllers\SolicitanteController;
+use App\Http\Controllers\NotificacionController;
 use App\Http\Controllers\PostPrestadorController;
 use App\Http\Controllers\LoginPrestadorController;
 use App\Http\Controllers\LogoutPrestadorController;
-use App\Http\Controllers\NotificacionController;
-use App\Http\Controllers\ProfesionesController;
 use App\Http\Controllers\RegisterControllerPrestador;
 
 

@@ -9,22 +9,33 @@
     <div class="container-contacto">
         
            <h1>Solicitantes</h1>
-           <h3>solicitantes Oferta: {{$oferta->titulo}}</h3>
+           <h3>Solicitantes Oferta: {{$oferta->titulo}}</h3>
            <div>
                 <ul>
-                    @if(count($oferta) > 0)
-                    @foreach ($oferta->solicitantes as $solicitante )
+                    
+                    @forelse($oferta->solicitantes as $solicitante )
                         <li>
                             <div>
-
+                               <p>
+                                {{$solicitante->user->name}}
+                               </p>
+                               <p>
+                                {{$solicitante->user->email}}
+                               </p>
+                               <p>
+                                {{$solicitante->user->numero}}
+                               </p>
+                               <p>
+                                {{$solicitante->created_at->diffForHumans()}}
+                               </p>
                             </div>
                             
                         </li>
-                    @endforeach
+                  
 
-                    @else
+                    @empty
                     <p>no hay candidatos</p>
-                    @endif
+                    @endforelse
 
                 </ul>
            </div>
