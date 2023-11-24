@@ -22,6 +22,9 @@
         @auth('web')
             @include('layouts.navbar.user')
         @endauth
+        @auth('prestador')
+            @include('layouts.navbar.prestador')
+        @endauth
        @guest
            @include('layouts.navbar.guest')
        @endguest
