@@ -25,7 +25,7 @@
     @endif
         <div class="livewire-pagination-container pagination">
         {{$ofertas->links()}}
-    </div>
+        </div>
 </div>
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
