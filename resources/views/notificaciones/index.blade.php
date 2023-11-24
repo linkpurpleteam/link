@@ -6,7 +6,6 @@
 <article class="publicacion-servicio">
     <div class="titulo-publicar">
         <h1>Mis notificaciones</h1>
-        <livewire:crear-oferta />
 
         @if (count($notificaciones ) > 0)
     @foreach ($notificaciones as $notificacion)
