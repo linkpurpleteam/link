@@ -31,13 +31,13 @@ class NuevaSolicitud extends Notification
      */
     public function via(object $notifiable): array
     {
-        return ['mail','database'];
+        return ['database'];
     }
 
     /**
      * Get the mail representation of the notification.
      */
-    public function toMail(object $notifiable): MailMessage
+    /*public function toMail(object $notifiable): MailMessage
     {
         $url = url('/notificaciones/' . $this->id_oferta);
 
@@ -46,7 +46,7 @@ class NuevaSolicitud extends Notification
                     ->line('La Solicitud es:' . $this->nombre_oferta)
                     ->action('Ver notificaciones', $url)
                     ->line('Gracias por utilizar Link');
-    }
+    }*/
 
 
     //Almacena las notificaciones en la DB  

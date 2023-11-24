@@ -24,7 +24,7 @@ class PostularOferta extends Component
         ]);
 
         //Crear notificacion 
-        $this->oferta->prestador->notify(new NuevaSolicitud($this->oferta->id, $this->oferta->titulo, auth('web')->user('web')->id,));
+        $this->oferta->prestador->notify(new NuevaSolicitud($this->oferta->id, $this->oferta->titulo, auth()->user()->id,));
       
 
         //Mostrar el usuario mensaje de ok
