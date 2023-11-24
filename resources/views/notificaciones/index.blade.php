@@ -1,4 +1,3 @@
-@endsection
 
 @extends('layouts.prestador-layout')
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Oferta;
 use App\Models\Solicitante;
 use Illuminate\Http\Request;
 
@@ -10,9 +11,11 @@ class SolicitanteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Oferta $oferta)
     {
-        //
+        return view('solicitantes.index',[
+            'oferta' => $oferta
+        ]);
     }
 
     /**

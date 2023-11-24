@@ -10,7 +10,7 @@
         
    
     <div>
-        <a href="#">Interesados</a>
+        <a href="{{route('solicitantes.index', $oferta)}}">Interesados</a>
         <a href="{{route('oferta.edit',$oferta->id)}}">Editar</a>
         <button wire:click="$dispatch('mostrarAlerta', {{$oferta->id}})">
             Eliminar</button>
