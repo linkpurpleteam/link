@@ -23,10 +23,13 @@
         @else
         <p>No hay ofertas que Mostrar</p>
         @endif
-        <div class="livewire-pagination-container pagination">
+
+    
+        
+    </div>   
+    <div class="livewire-pagination-container pagination">
             {{$ofertas->links()}}
-        </div>
-    </div>    
+    </div> 
 </div>
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
