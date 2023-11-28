@@ -17,7 +17,7 @@
             <p>Para disfrutar de nuestro portal crea tu usuario</p>
             <div class="btns">
               <div class="btn-busco-servicio">
-                <a href="#contacto">¿Buscas un servicio?</a>  
+                <a href="/register">¿Buscas un servicio?</a>  
               </div>
               <div class="btn-quiero-prestar">
                 <a href="/register-prestador">¿Ofreces un servicio?</a>  

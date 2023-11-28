@@ -274,20 +274,77 @@
 
 /* VISTA MIS PUBLICACIONES */
 
-.mis-publicaciones{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-    width: 85%;
-}
-.card-publicacion{
-    width: 169px;
-    height: 212px;
-    flex-shrink: 0;
-    border-radius: 25px;
-    border: 3px solid var(--turquesa);
-    background: var(--blanco);
+.tarjetas-publi-mostrar{
+    display: grid;
+    gap: 80px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 220px);
+    padding: 20px;
 }
 
+@media (max-width: 640px) {
+    .title-miss-publi {
+        width: 70%; 
+        margin-top: inherit;
+        width: 310px;
+        font-size: 25px;
+    }
+    .tarjetas-publi-mostrar{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+}
+
+.card-publicacion{
+    display: grid;
+    place-items: center;
+    width: 178px;
+    height: 220px;
+    flex-shrink: 0;
+    border-radius: 10%;
+    border: 3px solid var(--turquesa);
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding: 5%;
+}
+
+.card-publicacion a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--turquesa);    
+}
+
+.card-publicacion P{
+    text-align: justify;
+}
+
+.card-publicacion div, button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conten-terjetas-not{
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+}
+
+
+.title-miss-publi{
+    background-color: var(--naranja);
+    border-radius: 20px;
+    width: 50%;
+}
+
+.boton-eliminar{
+    background-color: var(--naranja);
+    border-radius: 5px; 
+    border: 2px solid var(--blanco); 
+    color: var(--blanco); width: 50%;
+}
