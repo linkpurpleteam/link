@@ -17,7 +17,7 @@ class PostController extends Controller
     //
     public function index()
     {
-        $ofertas = Oferta::all(); // Obtener todas las ofertas
+        $ofertas = Oferta::paginate(5); // Obtener todas las ofertas
         $user = auth()->user(); // Obtener el usuario autenticado
         return view('dashboard', compact('user', 'ofertas'));
     }

@@ -1,7 +1,10 @@
 <header class="header"> 
     <!--NAVBAR con Bootstrap-->
     <nav class="navbar bg-body-tertiary">
-        <img id="logo" src="{{asset('imagenes/logo y letra.png')}}" alt="Logo" width="200vh" height="200vh" class="d-inline-block align-text-top">
+        <a href="/principal">
+            <img id="logo" src="{{asset('imagenes/logo y letra.png')}}" alt="Logo" width="200vh" height="200vh" class="d-inline-block align-text-top">
+        </a>
+       
         <div class="container-fluid">
             <a href="{{route('post-prestador.index')}}" class="active d-none d-lg-block">Mis publicaciones</a>
             <a href="{{route('oferta.create')}}" class="active d-none d-lg-block">Crear publicacion</a>

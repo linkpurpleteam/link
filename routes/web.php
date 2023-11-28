@@ -6,11 +6,12 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProfesionesController;
+use App\Http\Controllers\SolicitanteController;
+use App\Http\Controllers\NotificacionController;
 use App\Http\Controllers\PostPrestadorController;
 use App\Http\Controllers\LoginPrestadorController;
 use App\Http\Controllers\LogoutPrestadorController;
-use App\Http\Controllers\NotificacionController;
-use App\Http\Controllers\ProfesionesController;
 use App\Http\Controllers\RegisterControllerPrestador;
 
 
@@ -47,6 +48,6 @@ Route::get('/create-prestador/{oferta}/edit',[PostPrestadorController::class,'ed
 Route::get('/create-prestador/{oferta}',[PostPrestadorController::class,'show'])->name('oferta.show');
 Route::get('/dashboard/{oferta}',[PostController::class,'show'])->name('oferta.show-user');
 Route::get('/dashboard',[PostController::class,'index'])->name('post.index');
-
+Route::get('/solicitantes/{oferta}',[SolicitanteController::class,'index'])->name('solicitantes.index');
 //Notificiacion
 Route::get('/notificaciones', NotificacionController::class)->middleware('auth')->name('notificaciones');

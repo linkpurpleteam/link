@@ -1,4 +1,3 @@
-@endsection
 
 @extends('layouts.prestador-layout')
 
@@ -7,7 +6,6 @@
 <article class="publicacion-servicio">
     <div class="titulo-publicar">
         <h1>Mis notificaciones</h1>
-        <livewire:crear-oferta />
 
         @if (count($notificaciones ) > 0)
     @foreach ($notificaciones as $notificacion)
@@ -31,14 +29,16 @@
                         <span>{{$notificacion->created_at->diffForHumans()}}</span>
                     </p>
                 </div>
+                
                 <p class="dato-usuario">Telefono:</p>
                 <div>
-                    <p>{{auth()->user()->Telefono}}</p>
+                    <p>{{$notificacion->data['usuario_numero']}}</p>
                 </div>
             </div> 
             <div class="ver-notificacion">
                 <div class="btn-contacto">
-                    <a href="#" >Ver</a>
+                    
+                    <a href="{{route('solicitantes.index', $notificacion->data['id_oferta'])}}" >Ver Interesados</a>
                 </div>  
             </div>
         </div>    

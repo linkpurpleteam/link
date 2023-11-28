@@ -13,6 +13,9 @@
             <a href="{{route('oferta.show-user', $oferta->id)}}">{{$oferta->titulo}}</a>
             <p>{{$oferta->descripcion}}</p>
             @endforeach
+            <div class="livewire-pagination-container pagination">
+            {{$ofertas->links()}}
+            </div>
           
         </div>
 

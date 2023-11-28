@@ -33,7 +33,7 @@ class Oferta extends Model
 
     public function solicitantes()
     {
-        return $this->hasMany(Solicitante::class);
+        return $this->hasMany(Solicitante::class)->orderBy('created_at', 'DESC' );
     }
     public function prestador()
     {
