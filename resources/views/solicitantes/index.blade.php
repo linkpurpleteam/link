@@ -6,7 +6,7 @@
 
 @section('contenido-prestador')
 
-    <div class="container-contacto">
+    <div class="muro-container">
         
            <h1>Solicitantes</h1>
            <h3>Solicitantes Oferta: {{$oferta->titulo}}</h3>

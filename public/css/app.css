@@ -703,12 +703,16 @@ option{
 }
 
 .muro-container {
-    max-width: 800px;
-    height: 500px;
-    margin: 20px auto;
-    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Ajusta según sea necesario */
+    margin: 0 auto; /* Centra el contenedor */
+    padding-top: 100px; /* Añade un relleno según sea necesario */
+    box-sizing: border-box;
+    height: auto; /* Hace que la altura se ajuste al contenido */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
 }
 
