@@ -13,13 +13,13 @@ class PostController extends Controller
     {
         $this->middleware('auth:web');
     }
+   
 
     //
     public function index()
     {
-        $ofertas = Oferta::paginate(5); // Obtener todas las ofertas
         $user = auth()->user(); // Obtener el usuario autenticado
-        return view('dashboard', compact('user', 'ofertas'));
+        return view('dashboard', compact('user'));
     }
 
     public function show(Oferta $oferta)

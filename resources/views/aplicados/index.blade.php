@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('contenido')
-<div class="container-contacto">
+<div class="muro-container">
         
     @forelse ($solicitudes as $solicitud)
     <div>
