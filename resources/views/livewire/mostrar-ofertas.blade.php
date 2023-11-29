@@ -6,7 +6,6 @@
                     <a href="{{ route('oferta.show', $oferta->id) }}">{{ $oferta->titulo }}</a>
                     <p>Descripción: {{ $oferta->descripcion }}</p>
                 </div>   
-
                 <div class="card-actions">
                     <a href="{{ route('solicitantes.index', $oferta) }}">
                         {{ $oferta->solicitantes->count() }} Interesados</a>
@@ -19,14 +18,10 @@
         @endforeach
     @else
         <p>No hay ofertas que mostrar</p>
-        
     @endif
     <div class="livewire-pagination-container pagination">
         {{ $ofertas->links() }}
     </div>
-</div>
-
-
 </div>
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

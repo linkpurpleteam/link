@@ -300,6 +300,7 @@
     background-color: var(--naranja);
     border-radius: 5px; 
     border: 2px solid var(--blanco); 
-    color: var(--blanco); width: 50%;
+    color: var(--blanco); 
+    width: 80%;
 }
 
