@@ -19,7 +19,7 @@
     @else
         <p>No hay ofertas que mostrar</p>
     @endif
-    <div class="livewire-pagination-container pagination">
+    <div class="pagination pagination-sm">
         {{ $ofertas->links() }}
     </div>
 </div>
