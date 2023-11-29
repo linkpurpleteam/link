@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AplicadosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
@@ -49,5 +50,6 @@ Route::get('/create-prestador/{oferta}',[PostPrestadorController::class,'show'])
 Route::get('/dashboard/{oferta}',[PostController::class,'show'])->name('oferta.show-user');
 Route::get('/dashboard',[PostController::class,'index'])->name('post.index');
 Route::get('/solicitantes/{oferta}',[SolicitanteController::class,'index'])->name('solicitantes.index');
+Route::get('/aplicados',[AplicadosController::class,'index'])->name('aplicados.index');
 //Notificiacion
 Route::get('/notificaciones', NotificacionController::class)->middleware('auth')->name('notificaciones');
