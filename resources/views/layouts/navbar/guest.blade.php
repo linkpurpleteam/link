@@ -1,7 +1,7 @@
 <!--Navbar inicial-->
 <header class="header">
     <nav class="navbar bg-body-primary">
-        <a href="/principal"><img id="logo" src="{{asset('imagenes/logo y letra.png')}}" alt="Logo" width="200vh" height="200vh" class="d-inline-block align-text-top"></a>
+        <a href="/principal"><img id="logo" src="{{asset('imagenes/logo y letra.png')}}" alt="Logo" width="200px" class="d-inline-block align-text-top"></a>
         <div class="container-fluid">
             <a href="/principal" class="active d-none d-lg-block">Home</a>
             <a href="#servicio" class="active d-none d-lg-block">Servicios</a>

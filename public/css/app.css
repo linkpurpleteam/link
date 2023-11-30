@@ -541,14 +541,14 @@ form h3{
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding: 2% 0%;
+    padding: 1% 0%;
     background-color: var(--turquesa);
     color: #ffffff;
 }
 
 /* Aqui empieza el estilo de los logos RRSS */
 .logos-footer img {
-    width: 40px;
+    width: 30px;
     height: auto;
     opacity: .8;
     transition: .5s;
@@ -564,8 +564,8 @@ form h3{
     display: inline-flex;
     justify-content: right;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: auto;
     opacity: .8;
     transition: .5s;
     margin: 0;

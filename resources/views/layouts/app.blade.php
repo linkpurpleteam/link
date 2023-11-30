@@ -35,8 +35,8 @@
 
         <footer>
             <div class="container-footer">
-                <img style="width: 100px; height: auto;" src="{{asset('imagenes/LogoBlanco.png')}}" alt="">
-                <a href="#" style="text-decoration: none; color: white;" ><p style="font-size: 20px;">Terminos y <br> condiciones</p></a>
+                <img style="width: 50px; height: auto;" src="{{asset('imagenes/LogoBlanco.png')}}" alt="">
+                <a href="#" style="text-decoration: none; color: white;" ><p style="font-size: 15px;">Terminos y <br> condiciones</p></a>
                 <div class="logos-footer">
                     <a href="#" target="_blank"><img src="{{asset('imagenes/correo.png')}}"  alt="Email" title="Email"></a>
                     <a href="#" target="_blank"><img src="{{asset('imagenes/facebook.png')}}" alt="Facebook" title="Facebook"></a>
@@ -45,10 +45,10 @@
                           
                 </div>
                 
-                <p style="font-size: 20px;">Ciudad de Buenos Aires <br> Argentina.</p>
+                <p style="font-size: 15px;">Ciudad de Buenos Aires <br> Argentina.</p>
                 <a href="#home"><img id="arriba" src="{{asset('imagenes/flecha2.png')}}" title="Ir arriba" alt="Flecha"></a>
             </div>
-            <p style="background-color: #2eb4b4; text-align: center; margin-bottom: 0%; padding-bottom: 10px;">Link - Todos los Derechos Reservados {{now()->year}}</p>
+            <p style="background-color: #2eb4b4; text-align: center; margin-bottom: 0%; padding-bottom: 8px;">Link - Todos los Derechos Reservados {{now()->year}}</p>
         </footer> 
         <script src="{{asset('js/app.js')}}"></script>       
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

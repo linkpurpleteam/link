@@ -2,7 +2,7 @@
     <!--NAVBAR con Bootstrap-->
     <nav class="navbar bg-body-tertiary">
         <a href="/principal">
-            <img id="logo" src="{{asset('imagenes/logo y letra.png')}}" alt="Logo" width="200vh" height="200vh" class="d-inline-block align-text-top">
+            <img id="logo" src="{{asset('imagenes/logo y letra.png')}}" alt="Logo" width="200px" class="d-inline-block align-text-top">
         </a>
        
         <div class="container-fluid">
