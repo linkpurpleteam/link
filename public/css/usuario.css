@@ -39,3 +39,105 @@
     display: grid;
     place-items: center;
 }
+
+.title-tu-muro{
+    background: var(--turquesa);
+    margin-top: 100px;
+    border-radius: 25px;
+    width: max-content;
+    padding-inline: 4%;
+}
+
+/* Aqui inicia Efecto girar tarjeta */
+
+.tarjetas {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.tarjeta {
+	width: 200px;
+	margin: 1rem;
+
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+
+.tarjeta .frontal,
+.tarjeta .tracero {
+	height: auto;
+	min-height: 280px;
+
+	background-size: cover;
+	background-position: center;
+
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+
+	color: #fff;
+	font-size: 0.5rem;
+	text-align: center;
+
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.tarjeta .frontal {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(https://unsplash.it/500/500/);
+  background-color: #66D7D1;
+  /* Posicion por defecto */
+  transform: rotateY(0deg);
+}
+.tarjeta .tracero {
+	width: 100%;
+	
+	background-color: #957DAD;
+	
+	top: 0;
+	left: 0;
+	position: absolute;
+  /* Posicion por defecto */
+	transform: rotateY(180deg);
+}
+/* Velocidad de trancicion */
+.tarjeta:hover .frontal,
+.tarjeta:hover .tracero {transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);}
+
+/* Girar imagen */
+.tarjeta:hover .frontal {transform: rotateY(-180deg);}
+.tarjeta:hover .tracero {transform: rotateY(0deg);}
+
+
+.tarjeta .contenido {
+	width: 100%;
+	position: absolute;
+	
+	padding: 2rem;
+	box-sizing: border-box;
+	
+	top: 50%;
+	left: 0;
+	perspective: inherit;
+  /* Posicion de texto central */
+	transform: translateY(-50%) translateZ(60px) scale(0.94);
+}
+.frontal .contenido p {
+	font-size: 1rem;
+	position: relative;
+	margin-bottom: .5rem;
+}
+.frontal .contenido hr {
+	width: 4rem;
+	height: 1px;
+	
+	background: #C6D4DF;
+	
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+}
+.frontal .contenido span {color: rgba(255, 255, 255, 0.7);}
+
+/*fin de girar tarjeta*/
