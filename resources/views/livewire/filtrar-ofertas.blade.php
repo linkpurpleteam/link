@@ -1,25 +1,21 @@
 <div>
-    <h4 >Buscar y Filtrar Ofertas</h4>
-
     <div>
-        <form
-        wire:submit.prevent='leerDatosFormulario'>
-            <div>
+        <form wire:submit.prevent='leerDatosFormulario'>
+            <div class="content-busqueda">
                 <div>
                     <label 
-                        for="termino">Término de Búsqueda
+                        for="termino">Búsca publicaciones recientes
                     </label>
-                    <input 
+                    <input
                         id="termino"
                         type="text"
                         placeholder="Buscar por Término: ej. diseñador"
                         wire:model="termino"
                     />
                 </div>
-
-                <div>
+                <div class="categoria-busqueda">
                     <label>Categoría</label>
-                    <select wire:model="categoria" >
+                    <select wire:model="categoria" class="categoria-bloq">
                         <option>--Seleccione--</option>
             
                         @foreach ($categorias as $categoria )
@@ -27,13 +23,13 @@
                         @endforeach
                     </select>
                 </div>
-            </div>
-
-            <div>
-                <input 
+                <div>
+                    <input 
+                    class="search-bloq"
                     type="submit"
                     value="Buscar"
-                />
+                    />
+                </div>
             </div>
         </form>
     </div>
