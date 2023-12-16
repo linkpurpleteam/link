@@ -1,8 +1,6 @@
-<div>
+<div class="tarjetas-publi-mostrar">
     <livewire:filtrar-ofertas />
-    <div>
-        <h3>Ofertas Disponibles</h3>
-        
+    <div class="tarjetas-publi-mostrar">
         @forelse ($ofertas as $oferta )
         <div class="card-mobiles">
             <div class="tarjetas">
@@ -27,8 +25,7 @@
         @empty
             <p>No hay Ofertas que Mostrar</p>
         @endforelse
-        <div class="pagination pagination-sm">
             {{$ofertas->links()}}
-            </div>
     </div>
+    <div class="pagination pagination-sm"></div>
 </div>

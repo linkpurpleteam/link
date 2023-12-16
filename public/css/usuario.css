@@ -41,10 +41,8 @@
 }
 
 .title-tu-muro{
-    background: var(--turquesa);
-    margin-top: 100px;
+    color: var(--turquesa);
     border-radius: 25px;
-    width: max-content;
     padding-inline: 4%;
 }
 
