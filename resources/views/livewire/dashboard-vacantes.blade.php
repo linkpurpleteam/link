@@ -1,4 +1,4 @@
-<div class="tarjetas-publi-mostrar">
+<div>
     <livewire:filtrar-ofertas />
     <div class="tarjetas-publi-mostrar">
         @forelse ($ofertas as $oferta )
